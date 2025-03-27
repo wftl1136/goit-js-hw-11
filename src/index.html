@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Vanilla App Template</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
@@ -11,30 +15,27 @@
     <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
 
     <main>
-      <ul class="page">
-        <li>
-          <a class="link-with-preview" href="./1-timer.html">
-            <span class="link-text">Timer </span>
-            <img
-              src="./img/timer.JPG"
-              alt="Прев’ю Timer"
-              class="preview-image"
-            />
-          </a>
-        </li>
-        <li>
-          <a class="link-with-preview" href="./2-snackbar.html">
-            <span class="link-text">Snackbar</span>
-            <img
-              src="./img/snackbar.JPG"
-              alt="Прев’ю Snackbar"
-              class="preview-image"
-            />
-          </a>
-        </li>
-      </ul>
+      <form class="form">
+        <label>
+          <input
+            type="text"
+            name="search-text"
+            placeholder="Search images..."
+            required
+          />
+        </label>
+        <button class="btn-search" type="submit">Search</button>
+      </form>
+      <span class="loader hidden"></span>
+
+      <ul class="gallery"></ul>
+
+      <button id="scrollToTop" class="scroll-to-top">
+        <img src="./img/scroll-to-top.svg" alt="Scroll Up" />
+      </button>
     </main>
 
     <load src="./partials/footer.html" />
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
