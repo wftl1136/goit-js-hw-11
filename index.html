@@ -2,10 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/goit-js-hw-10/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/goit-js-hw-11/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Vanilla App Template</title>
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/styles-C6IKje5W.css">
+    <script type="module" crossorigin src="/goit-js-hw-11/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-CjwUT-lV.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/vendor-Dr4k8ETB.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/index-GyXjWbjk.css">
   </head>
   <body>
     <header class="header">
@@ -13,46 +20,32 @@
     <nav class="nav">
       <a class="nav-logo" href="./index.html" aria-label="Site logo">
         <svg class="nav-logo-icon" width="100" height="30">
-          <use href="/goit-js-hw-10/assets/sprite-E8vg0sBb.svg#logo"></use>
+          <use href="/goit-js-hw-11/assets/sprite-E8vg0sBb.svg#logo"></use>
         </svg>
       </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./1-timer.html">Timer</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./2-snackbar.html"
-            >Snackbar</a
-          >
-        </li>
-      </ul>
     </nav>
   </div>
 </header>
 
     <main>
-      <ul class="page">
-        <li>
-          <a class="link-with-preview" href="./1-timer.html">
-            <span class="link-text">Timer </span>
-            <img
-              src="./img/timer.JPG"
-              alt="Прев’ю Timer"
-              class="preview-image"
-            />
-          </a>
-        </li>
-        <li>
-          <a class="link-with-preview" href="./2-snackbar.html">
-            <span class="link-text">Snackbar</span>
-            <img
-              src="./img/snackbar.JPG"
-              alt="Прев’ю Snackbar"
-              class="preview-image"
-            />
-          </a>
-        </li>
-      </ul>
+      <form class="form">
+        <label>
+          <input
+            type="text"
+            name="search-text"
+            placeholder="Search images..."
+            required
+          />
+        </label>
+        <button class="btn-search" type="submit">Search</button>
+      </form>
+      <span class="loader hidden"></span>
+
+      <ul class="gallery"></ul>
+
+      <button id="scrollToTop" class="scroll-to-top">
+        <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%3e%3cpath%20d='M4%2016l8-8%208%208'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%20fill='none'/%3e%3c/svg%3e" alt="Scroll Up" />
+      </button>
     </main>
 
     <footer class="footer">
@@ -70,6 +63,5 @@
     </p>
   </div>
 </footer>
-
   </body>
 </html>
